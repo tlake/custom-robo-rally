@@ -1,15 +1,16 @@
 # MOBA RALLY
-(...or **Defense of the Robots** or **League of Robots** or **Robots of the Storm** or **Robots of Newearth** or **Call of Robots**…)
+(...or **Defense of the Robots** or **League of Robots** or **Robots of the Storm** or **Robots of Newearth** or **Call of Robots**...)
 
+`v0.1.1`
 
 ## Summary
-In this 4v4 team game, each team is trying to destroy the opposing team's base while defending their own. Defensive towers surround the bases, firing upon enemy robots within range.
+In this 4v4 (or 3v3, or 2v2, or even 1v1) team game, each team is trying to destroy the opposing team's base while defending their own. Defensive towers surround the bases, firing upon enemy robots within range.
 
 
-##Winning and Scoring
+## Winning and Scoring
 A KDO (Kills/Deaths/Objectives) score is tracked for each robot. Every killing shot a robot makes on another robot increments the robot's Kills counter; every death increments its Deaths counter; every killing shot on an Objective increments the Objectives counter.
 
-When one of the two bases is destroyed, the game ends. The winner is the robot with the highest KDO score on the team that still has its base. The KDO score is computed as follows:
+When one of the two bases is destroyed, the game ends. The winning team is the team that still has their base, and the winning robot is the robot with the highest KDO score on the winning team. The KDO score is computed as follows:
 
 `Kills - Deaths + (Objectives * 5)`
 
@@ -19,7 +20,15 @@ Credit for kills and objectives is counted for all participants - if two robots 
 
 
 ## Setup
-The game board is composed of two identical boards ("Vault"), mirrored. Add a second copy of the _High-Power Laser_ and _Double-Barreled Laser_ option cards to the option card deck. Each team has a spawning zone behind their base, snugged up such that the spawn zones are only one square removed from the board. There are four towers, situated at the corners of the walls surrounding each base.
+**Note: This game variant requires components from two sets of the game, and is built upon the 2005 Avalon Hill release.**
+
+The game board is composed of two identical boards ("Vault"), mirrored such that the small two-square blue conveyor belts on each board are facing into the other board.
+
+Each team has a spawning zone behind their base, snugged up such that the spawn zones are only one square removed from the board.
+
+Add a second copy of the _High-Power Laser_ and _Double-Barreled Laser_ option cards to the option card deck.
+
+Mark four towers for each base (a base made up of the four wrench-and-hammer tiles in the center of each board), using flags or ten-sided dice. These towers are situated outside of the cornered walls surrounding each base: for each corner of each board, count three spaces diagonally inwards and place a tower at the fourth space.
 
 
 ## Game Features
@@ -57,13 +66,13 @@ x x x T x x x
 
 
 ### Bases
-Bases are represented by the four wrench squares clustered together in the center of the boards.
+Bases are represented by the four wrench squares clustered together in the center of the boards. These wrenches do not behave as normal.
 
 If a robot ends the round inside their own base, they heal 2 points of damage. They may also transfer an option card in their possession to the base, granting that option to the entire allied team. A base may only have one team option active at any point, and a robot may overwrite the existing team option. The replaced option card is sent to the graveyard.
 
 Bases are equipped with a sophisticated ID system, so robots may only enter their own base, not the enemy's.
 
-If an enemy robot is able to strike the base with its Mini Howitzer, it may instead elect to disrupt the base's option transmitter. Discard the base's team option card to the graveyard.
+If an enemy robot is able to strike the base with its _Mini Howitzer_, it may instead elect to disrupt the base's option transmitter. Discard the base's team option card to the graveyard.
 
 A base has 40 hit points, and the perimeter of the base counts as a wall for purposes of laser fire.
 
@@ -72,6 +81,15 @@ A base has 40 hit points, and the perimeter of the base counts as a wall for pur
 The four wrenches in the center of each board represent the bases; see the **Bases** section for their rules.
 
 The remaining wrenches (two in opposite corners of each board) grant a robot an option card when the robot ends its fifth phase upon the square - if and only if the robot is on the enemy board. A robot does not gain an option card from the wrenches on the board upon which the robot's base also resides.
+
+
+### Powering Down
+All robots may power down as per the default rules with a few modifications and clarifications, detailed here.
+
+A powered-down robot does not benefit from the healing granted by their base.
+
+A powered-down robot does not benefit from team-broadcast option cards, unless the card specifically states that it affects powered-down robots (such as _Power Down Shield_).
+- If _Ablative Coat_ is being broadcast as a team option, an allied robot does not benefit from it while powered down. See the **Option Cards** section for further details.
 
 
 ### Option Cards
@@ -88,20 +106,23 @@ Operates as normal, with the following modifications:
 
 #### High-Power Laser
 Operates as normal, with the following modifications:
-- Increases Mini Howitzer range by 1
+- Increases _Mini Howitzer_ range by 1
 - For the purposes of extending the laser through a wall or robot, towers count as walls
 
 #### Double-Barreled Laser
 Operates as normal, with the following modifications:
-- Allows Mini Howitzer to deal 2 damage instead of 1
+- Allows _Mini Howitzer_ to deal 2 damage instead of 1
 
 #### Ablative Coat
 Operates as normal on an individual basis. When installed into a base as a team option, this card reads as follows:
 - Give all living allied robots two green tokens.
 - As long as this option is broadcast, an allied robot may discard a token instead of taking a point of damage.
 - As long as this option is broadcast, an allied robot gains two green tokens upon respawning. The respawning robot still begins play with the normal two damage tokens.
+- As long as this option is broadcast, an allied robot gains two green tokens upon powering up.
+- When a robot dies, remove all green tokens from the robot.
+- When a robot powers down, remove all green tokens from the robot.
 - When this card is discarded from the base, remove all green tokens from allied robots.
-- No robot may ever be in possession of more than two tokens (a robot cannot gain tokens, die by falling into a pit, and then gain two additional tokens upon respawning).
+- No robot may ever be in possession of more than two green tokens.
 
 
 ### Timings
