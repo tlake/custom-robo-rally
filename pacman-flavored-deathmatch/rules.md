@@ -1,0 +1,73 @@
+# PAC-MAN FLAVORED DEATHMATCH
+
+## Summary
+Survival is the name of the game. Be the last robot standing in this deathmatch influenced by an old video game! Fruits spawn to give lucky robots an edge. If you run out of lives, don't despair - you can still harass other players as a ghost and pull yourself back into the game!
+
+
+## Winning and Scoring
+Last robot standing is the victor! Or, if timeboxing the game: the robot with the most lives at the end of the timebox is the victor!
+
+
+## Setup
+This variant uses the "Exchange" board. Consider the top side of the board to be the side with the two green spinners, and the bottom side to be the side with the two pits. Place a spawning board at the top and the bottom of the board (or just the bottom, if you have just a single copy of the game).
+
+Place four flags on the board at positions (1,1), (1,10), (10,1), and (10,10), assuming the board to be an (x,y) coordinate grid that runs from 0 to 11, with (0,0) being the wrench in the bottom left of the board.
+
+You will need 1d4 and 1d8.
+
+All robots begin the game with three lives and one random option card.
+
+
+## Game Features
+
+## Map
+Board wrenches/hammers are inactive - treat them as standard, empty spaces.
+
+The two center spaces on the open edges of the map are treated as adjacent - a robot may "wrap around" to the other side of the map. That is, a robot may move (or be moved) between (0,6) and (11,6), as well as between (0,5) and (11,5). Weapons fire does not wrap around, however.
+
+Other edge spaces are treated normally (death, walls).
+
+
+## Spawning
+Player's choice, either side of board, in order of least-recent death.
+
+No weapons are fired from robots inside a spawning zone, and no weapons extend into a spawning zone from the board.
+
+Once a robot leaves a spawning zone, it may not re-enter unless it dies and respawns. Treat the barrier between a spawning zone and the board as a one-way wall.
+
+At the end of each round, all robots inside the spawning zone take damage equal to the number of rounds they have stayed in the zone. This counter resets when the robot leaves the spawning zone, or dies.
+
+_Example: Twonky has just respawned, and spends all of the first five phases inside the spawning zone. After the fifth phase, Twonky takes one point of damage. If Twonky is still in the spawning zone after the second round, it takes two points of damage, having now sustained a total of three points. At the end of the third round, it takes three more damage, having now accumulated six points of damage. If Twonky doesn't leave the spawning zone before the fourth round ends, it will take lethal damage, lose a life counter, and respawn, resetting the rounds-spent-in-spawn counter._
+
+
+## Power Dots
+
+The four flags placed on the board mark Power Dot locations. Any robot ending a **round** (not just a register phase) will spend the next **round** in Pac-Mode.
+
+Once obtained, a Power Dot remains inactive for two rounds (the round during which the robot is in Pac-Mode and the round afterward) in order to prevent Power Dot camping. Track this using damage counters on the flag: place two damage counters on a flag as soon as it is obtained, and remove one counter from every flag at the end of each round.
+
+
+## Pac-Mode
+A robot who is in Pac-Mode gains the following modifications:
+Lasers deal an additional 4 damage, but have a range of only 3 squares.
+Pushing a robot that is not in Pac-Mode instantly kills that robot.
+Any MOVE action may be played as MOVE+1 action.
+
+Robots in Pac-Mode are just as susceptible to death, damage, and being pushed as normal robots.
+
+
+## Fruit
+The four squares in the center of the board are locations where fruit may be spawned. At the end of each round, assign each of the four squares a unique number from 1 to 4, and then roll 1d4 to determine the square in which the fruit will spawn. Then, roll 1d8 to determine which fruit spawns in that square:
+  - 1-4: Heal 2 Damage
+  - 5-7: Option Card
+  - 8: Extra Life
+
+Up to four pieces of fruit may be active at a time, provided they are all in different spaces; a newly-spawned fruit replaces any fruit that may already exist at the location in which it is spawned.
+
+Fruit is obtained just by moving onto or across the fruit's square; a robot does not need to end its movement on the square in order to acquire the fruit.
+
+
+## Ghosts
+A robot that has run out of lives becomes a ghost! Ghosts use the center four squares (yes, the fruit squares) to spawn. A ghostbot cannot obtain fruit, and taking any amount of damage will kill it. If a ghostbot pushes a non-Pac-Mode robot, that robot instantly dies and it counts as a kill for the ghostbot. Ghostbots have a laser that functions as normal, and they deal no damage to other ghostbots.
+
+If a ghost robot kills another robot, the ghostbot immediately gains a life token, is removed from the board, and enters the respawn queue as a regular robot.
