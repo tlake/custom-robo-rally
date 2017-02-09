@@ -1,14 +1,18 @@
 # MOBA RALLY
-(...or **Defense of the Robots** or **League of Robots** or **Robots of the Storm** or **Robots of Newearth** or **Call of Robots**...)
+_(...or **Defense of the Robots** or **League of Robots** or **Robots of the Storm** or **Robots of Newearth** or **Call of Robots**...)_
 
-`v0.1.1`
+`v0.1.2`
+
 
 ## Summary
 In this 4v4 (or 3v3, or 2v2, or even 1v1) team game, each team is trying to destroy the opposing team's base while defending their own. Defensive towers surround the bases, firing upon enemy robots within range.
 
 
 ## Winning and Scoring
-A KDO (Kills/Deaths/Objectives) score is tracked for each robot. Every killing shot a robot makes on another robot increments the robot's Kills counter; every death increments its Deaths counter; every killing shot on an Objective increments the Objectives counter.
+A KDO (Kills/Deaths/Objectives) score is tracked for each robot.
+- When a robot kills an enemy robot, increment the killing robot's Kills counter (if a robot kills an allied robot, the killing robot does not increment its Kills counter).
+- When a robot dies, increment the robot's Deaths counter.
+- When a robot destroys an objective, increment the robot's Objectives counter.
 
 When one of the two bases is destroyed, the game ends. The winning team is the team that still has their base, and the winning robot is the robot with the highest KDO score on the winning team. The KDO score is computed as follows:
 
@@ -16,7 +20,18 @@ When one of the two bases is destroyed, the game ends. The winning team is the t
 
 In the event of both bases being destroyed simultaneously, the winner is the robot with the highest KDO among all robots. In the event of a KDO tie, the winner is the robot with the highest Objectives score among tied robots; then, the robot with the highest Kills score among tied robots; then, the robot with the lowest Deaths score among tied robots.
 
-Credit for kills and objectives is counted for all participants - if two robots fire a killing shot on the same robot or objective, both robots are awarded credit.
+Credit for kills and objectives is counted for all participants - if a robot or objective would be killed as a direct result of multiple enemy robots' actions, all involved enemy robots would receive credit.
+
+Consider the following examples, where R1 is an enemy robot and R2 and R3 are allied:
+- R1 has 9 damage tokens, and R2 and R3 both fire upon R1, each dealing 1 damage. R1 dies as a result, and R2 and R3 each increment their Kills score.
+- R1 has 8 damage tokens, and R2 and R3 both fire upon R1, each dealing 1 damage. R1 dies as a result, and R2 and R3 each increment their Kills score. Despite the fact that neither R2 nor R3 could have destroyed R1 on their own, since their combined efforts resulted in R1's death, both allied robots get credit for the kill.
+- R1 has 9 damage tokens, and R2 pushes R1 into R3's line of fire: R3 deals 1 point of damage and destroys R1. Only R3 gets credit for the kill, even though R2 pushed R1 into R3's line of fire.
+- R1 has 9 damage tokens, and R2 pushes R1 into a board laser. The board laser destroys R1 on that same register phase, and R2 gets credit for the kill.
+- R2 uses the _Radio Control_ option on R1 and R1 moves into a pit or off the board or into a board laser and dies as a result. R2 receives credit for the kill if both of the following conditions are true:
+1. The use of _Radio Control_ and R1's destruction both happened during the same round (but not necessarily on the same register phase)
+2. No other robot has interfered with R1's movement (pushing as a movement action, _Pressor Beam_, _Tractor Beam_, _Scrambler_, _Mini Howitzer_, and another _Radio Control_ all count as interference) between the time that _Radio Control_ was used and the time of R1's destruction
+- R2 uses the _Radio Control_ option on R1 and R1 moves beside a pit. R3 then moves into R1, pushing R1 into the pit. R3 gets credit for the kill, but R2 does not.
+- R2 uses _Pressor Beam_ or _Tractor Beam_ to push or pull R1 into a pit or off the board or into a board laser. R1 dies, and R2 gets credit for the kill.
 
 
 ## Setup
@@ -34,23 +49,36 @@ Mark four towers for each base (a base made up of the four wrench-and-hammer til
 ## Game Features
 
 ### Teamwork
-A robot does not block weapons fire or line-of-sight for other allied robots. Robots do not deal damage to other allied robots (friendly fire is off).
+Most weapons and attacks do not affect or damage allied robots, and allied robots do not block line of sight for other allied robots. The cases where this is not so are as follows: 
+- _Pressor Beam_ and _Tractor Beam_ must affect the first robot (allied or enemy) it could hit. 
+- _Ramming Gear_ still does damage to allied robots.
 
+Consider the following example, where angle brackets indicate the direction in which a robot is facing, robots 1 and 2 are allied, and robots 3 and 4 are allied:
+
+`R1>   R2>   <R3   <R4`
+
+- R1 and R2 will both deal main laser damage to R3, and R3 and R4 will both deal main laser damage to R2.
+- If R1 uses _High-Power Laser_, both R3 and R4 will take main laser damage.
+- If R1 uses _Pressor Beam_ or _Tractor Beam_, it must affect R2.
+- If R3 were instead a tower or a base, both R1 and R2 could use _Mini Howitzer_ to damage it.
+- If R1 uses _Mini Howitzer_ to attack (and R3 is in range), the weapon would bypass R2 and apply _Mini Howitzer_'s damage and pushing ability to R3.
+- If R1 possesses _Ramming Gear_ and pushes R2, R2 will take damage as specified from _Ramming Gear_.
+- If R1 uses _Radio Control_ or _Scrambler_, R3 will be affected.
+
+A robot may still push any robot, allied or enemy.
 
 ### Spawning
 A robot may only respawn in their team's spawning zone. Robots do not fire weapons while inside the spawn zone, and attacks from the board do not extend into spawn zones. The barrier is one-way; dying and respawning is the only way to re-enter the spawning zone.
 
-
 ### Objectives
 "Objectives" is a term that means "towers and/or bases." Objectives cannot be damaged by a robot's regular laser fire; rather, the _Mini Howitzer_ option card is the only way to damage a tower or a base, and is a permanent global option. See the **Option Cards** section for rules.
-
 
 ### Towers
 Towers have a range of 3 squares, calculated without diagonals (this creates a diamond-shaped threat zone - see diagram at end of section). When weapons are fired, a tower selects a target at random from enemy robots in range and deals 3 damage to that robot. Towers are tall, so walls and other robots don't block a tower's line of sight.
 
 Towers have 10 hit points, and count as impassable terrain that blocks weapons fire and line of sight until destroyed.
 
-When destroyed (check for destruction as the final step of the damage phase, after all other damages and deaths have been accounted for), a tower deals 5 damage to its friendly base, and each living enemy robot is awarded an option card.
+When destroyed, a tower deals 5 damage to its friendly base, and each living enemy robot is awarded an option card.
 
 ```
 tower threat pattern:
@@ -64,11 +92,10 @@ x x x T x x x
       x
 ```
 
-
 ### Bases
 Bases are represented by the four wrench squares clustered together in the center of the boards. These wrenches do not behave as normal.
 
-If a robot ends the round inside their own base, they heal 2 points of damage. They may also transfer an option card in their possession to the base, granting that option to the entire allied team. A base may only have one team option active at any point, and a robot may overwrite the existing team option. The replaced option card is sent to the graveyard.
+If a robot ends the round powered-up inside their own base, they heal 2 points of damage. They may also transfer an option card in their possession to the base, granting that option to the entire allied team. A base may only have one team option active at any point, and a robot may overwrite the existing team option. The replaced option card is sent to the graveyard.
 
 Bases are equipped with a sophisticated ID system, so robots may only enter their own base, not the enemy's.
 
@@ -76,21 +103,21 @@ If an enemy robot is able to strike the base with its _Mini Howitzer_, it may in
 
 A base has 40 hit points, and the perimeter of the base counts as a wall for purposes of laser fire.
 
-
 ### Wrench Squares
 The four wrenches in the center of each board represent the bases; see the **Bases** section for their rules.
 
-The remaining wrenches (two in opposite corners of each board) grant a robot an option card when the robot ends its fifth phase upon the square - if and only if the robot is on the enemy board. A robot does not gain an option card from the wrenches on the board upon which the robot's base also resides.
+The remaining wrenches (two in opposite corners of each board) grant a robot an option card when the robot ends the fifth register phase powered-up on the tile, provided that the robot is on the enemy board. A robot does not gain an option card from the wrenches on the board upon which the robot's base also resides.
 
 
 ### Powering Down
 All robots may power down as per the default rules with a few modifications and clarifications, detailed here.
 
-A powered-down robot does not benefit from the healing granted by their base.
+A powered-down robot does not benefit from the healing granted by their base, nor can they install team option cards to the base.
+
+A powered-down robot does gain option cards from wrenches.
 
 A powered-down robot does not benefit from team-broadcast option cards, unless the card specifically states that it affects powered-down robots (such as _Power Down Shield_).
 - If _Ablative Coat_ is being broadcast as a team option, an allied robot does not benefit from it while powered down. See the **Option Cards** section for further details.
-
 
 ### Option Cards
 There are a few modifications to option cards, detailed here.
@@ -101,21 +128,21 @@ Operates as normal, with the following modifications:
 - Range of 3 squares
 - Able to damage towers and bases
 - No ammunition tracker
-- With High-Power Laser: range of 4 squares
-- With Double-Barreled Laser: deals 2 damage
+- With _High-Power Laser_: increase range by 1
+- With _Double-Barreled Laser_: increase damage by 1
 
 #### High-Power Laser
 Operates as normal, with the following modifications:
-- Increases _Mini Howitzer_ range by 1
+- Increases Mini Howitzer range by 1
 - For the purposes of extending the laser through a wall or robot, towers count as walls
 
 #### Double-Barreled Laser
 Operates as normal, with the following modifications:
-- Allows _Mini Howitzer_ to deal 2 damage instead of 1
+- Increases Mini Howitzer damage by 1
 
 #### Ablative Coat
 Operates as normal on an individual basis. When installed into a base as a team option, this card reads as follows:
-- Give all living allied robots two green tokens.
+- Give all living, powered-up allied robots two green tokens.
 - As long as this option is broadcast, an allied robot may discard a token instead of taking a point of damage.
 - As long as this option is broadcast, an allied robot gains two green tokens upon respawning. The respawning robot still begins play with the normal two damage tokens.
 - As long as this option is broadcast, an allied robot gains two green tokens upon powering up.
@@ -124,15 +151,21 @@ Operates as normal on an individual basis. When installed into a base as a team 
 - When this card is discarded from the base, remove all green tokens from allied robots.
 - No robot may ever be in possession of more than two green tokens.
 
+### Esoterica and Errata
 
-### Timings
+#### Timing of the Damage Resolution Step
+1. Resolve all damage effects simultaneously
+    - Robot lasers
+    - Board lasers
+    - Damage from option cards (like Double-Barreled Laser or Mini Howitzer)
+    - Damage to towers
+    - Damage from towers
+    - Damage to bases (if a robot has elected to deal damage to a base)
+2. Resolve non-damage effects from all weapons in order of register card priority
+    - This step includes the use of Mini Howitzer upon a base to discard a team's option card
+3. Remove destroyed robots and objectives
 
-#### Team Option Installation:
-**End of Round**
+#### Timing of Team Option Installation:
+- End of Round
 
-After everything in Phase 5 has been resolved, conclude Phase 5 and begin the End of Round phase. At this point, a robot in a base may elect to install an option it's currently carrying into the base. This decision window closes with the termination of the End of Round phase (in other words, decide before the next round of program cards are dealt).
-
-#### Team Option Destruction:
-**Very End of Damage Resolution**
-
-After all other damage has been resolved (robots shooting robots, board lasers shooting robots, towers shooting robots), if a robot has targeted a base's option transmitter, discard the base's option card to the graveyard. This allows robots to benefit from their team option during the damage phase when their option card would be lost.
+After everything in Phase 5 has been resolved, conclude Phase 5 and begin the End of Round phase. At this point, a robot in a base may elect to install an option it's currently carrying into the base. This decision window closes with the termination of the End of Round phase (in other words, decide before the next round of program cards are dealt)
