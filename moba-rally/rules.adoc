@@ -197,7 +197,7 @@ Operates as normal on an individual basis. When installed into a base as a team 
 Operates as normal, with the following modifications:
 
 * Increases _<<Mini Howitzer>>_ damage by 1.
-* **Cannot** be installed into a base a team option.
+* **Cannot** be installed into a base as a team option.
 
 ==== High-Power Laser
 Operates as normal, with the following modifications:
