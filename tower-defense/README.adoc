@@ -161,12 +161,22 @@ If a robot ends a turn on a flag, kills a tower, or ends on a double repair site
 ==== Double-Barreled Laser
 * Can hit drones
 
-
 ==== Ramming Gear
 * Damage of 2 to towers
 
 ==== Pressor Beam
 * Moves Drones 5 spaces
 
+=== Definitions
 
+==== XP
+Experience Points
 
+==== Indirect Fire
+Can fire over walls and other barriers - including robots and towers - to hit something on the far side (splash damage can still hurt the object fired over).
+
+==== Splash Damage
+Deals one less point of damage for each square away from the center square where the shell, missile, or drone hit.
+
+==== Off Target
+If the off-target direction is diagonal, divide the number of squares by 2 and round up.
