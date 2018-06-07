@@ -1,0 +1,115 @@
+:toc: macro
+:toc-title:
+= Michael Bay Presents: Roborally
+
+Eric Carter +
+`v0.1.0`
+
+toc::[]
+
+== Overview
+In a world... of titles, explosions, CGI, and robots, the bots are fighting each other, the collapsing world around them, and zombies to be the last bot standing.
+
+== Winning Criteria
+* Be the last bot standing.
+* All robots are given three lives and 25 turns to stay alive. The last robot to survive will win. In the event of a tie.. Sudden Death.... every phase will invoke a bomb to be dropped, randomly by dice roll.
+* Robots that lose all three lives will become zombie robots that can affect the outcome of other robots.
+
+== Board layout
+* 4 tiles
+* Spawn is random - roll 4-sided dice for board, four 6-sided dice for placement.
+
+== Exploding rules
+* If a robot dies (without falling into a pit or off board), robot explodes! A 3x3 area of the map surrounding the robot is destroyed and becomes a pit.
+* If another robot is in the blast radius (3x3 area) will push robots one unit away (diagonals legal) from the center of the explosion.
+	** This may cause robot to fall into another pit or off board and die.
+	** If robot survies, take 2 damage.
+* Board lasers that originate in a destroyed tile are no longer operational
+* If the map is divided into two pieces then the smaller half will “fall off” (same behavior as being destroyed).
+* If a board tile has been entirely destroyed, it is removed.
+* If a spawn tile is orphaned from the board then it will shift it’s position clockwise to the nearest valid board tile edge.
+* If there are no valid edges for the spawn tile, then flag spawning is mandatory
+
+== Robot Rules
+Robots have three lives
+If a robot’s actions directly attribute to the death of another robot in the same turn, then they can recover one life (up to the maximum of three)
+If a robot runs out of lives, they become a zombie
+
+== Zombie Rules
+* Zombies always have ramming gear
+* Zombies have no laser
+* Zombies cannot have or gain options
+* If a zombie’s actions directly attribute to the death of another robot in the same turn, then they can recover one life (up to the maximum of three), promoting the zombie back to living status
+* Zombies spawn on a randomly rolled spawn flag
+* If a zombie takes any damage, it explodes.
+
+== Spawn Flags
+* Robots can only spawn on flags.
+* At the beginning of the game, robots must spawn on the flag that corresponds to start priority.
+* When a robot respawns (after death), dice is rolled to determine spawn flag, order of respawn is based on order of death (first-in, first-out).
+* If a spawn flag is occupied or gone then the player will spawn on the next highest flag number, wrapping back to 1 if flag 8 is occupied.
+* If all spawn flags are occupied then the player can spawn on any location one space away from the flag.
+
+== Launch Flags
+* Flags 1 and 8 cannot be lost in pits.
+* If Flag 1 or 8 fall into a pit, they are re-rolled for new placement at the end of the turn.
+
+=== Launch Flag Placement
+* Each board tile will be numbered 1-4, a dice is rolled to determine which tile is used on placement.
+* Once the tile is chose, 2 d12 dice are rolled to detemrine the X-Y coordinates.
+* The flag's placement is offset from the outer corner of the tile along the coordiates.
+* If a tile space is missing, it is skipped. it is possible that you'll need to wrap around if many spaces are missing.
+
+== Launch Events
+* Flags 1 and 8 are special launch flags
+* If at the end of a round a player is on flag 1 then a rocket launches from that flag
+* The rocket is represented by a damage token
+* The direction of the rocket is player's choice or random if the player is unavailable
+* The rocket travels at 1 spaces per phase
+* It travels above the board and does not impact players or robots
+* If at the end of a phase a player is on flag 8, then all rockets detonate, standard explosion rules apply (3x3)
+* Detonations occur before new rockets are shot
+
+== Special Item Rules
+
+=== Ramming gear
+* Ramming gear is front-mounted, so you can only get damage from front-impacts
+* One damage per space of movement
+* If a robot pushed you from the front, they recieve damage
+
+=== Power Down
+* For the duration of the game, robots can only power down a total of 3 times.
+* A robot cannot power down twice in a row
+* Any laser damage to a powered down robot is doubled
+* When the robot powers-up, this invokes a bomb on the space (belts do not affect this position).
+	** This bomb will detonate at the end of the turn before flag events.
+
+== Flag events
+* If any player finishes a round on any flag, an event is triggered
+* Flag events are 2d6
+* Only one event can be triggered per round
+
+== Order of Phase
+1. execute cards in order
+2. belts and spinners
+3. shots and lasers, triggers
+4. rocket movement or explosion
+
+== Order of Turn
+1. Flag events
+2. Respawn flags (if explosion caused them to fall)
+3. Respawn robots (first death-first in) 
+
+=== Events
+1. [intentionally left blank]
+2. The Assassin – A random player is killed
+3. Trumped – Everyone loses an option, except for the player(s) with the most options. (Yuuuge!)
+4. Red Wire – A randomly rolled flag explodes
+5. Memory Corruption – All players are dealt five cards (no more or less), regardless of current health levels. Locked registers stay locked, does not affect powered-down players.
+6. Cube – Spawn tiles shift position one tile clockwise
+7. Rancid - Time bomb is dropped randomly on the board, explodes at the end of the next round, (3x3)
+8. Earthquake – All players are shifted 2 spaces in a randomly rolled direction
+9. Senzu Beans – Everyone fully heals
+10. Sticky Fingers – All players not on flags lose one option, players on flags can take as many of those options as they want (round-robin selection, in flag priority order)
+11. Resurrection - All players on flags receive an additional life, up to their maximum
+12. The Oppressor – A random player is given three option cards (they must discard down to 3)
