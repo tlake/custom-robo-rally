@@ -1,2 +1,8 @@
 # vim
 *.swp
+
+# python
+.pyc
+__pycache__
+.python-version
+.ropeproject
