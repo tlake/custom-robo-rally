@@ -141,7 +141,7 @@ class RR_Alias():
         try:
             result = self.operations[flag](self.make_substitutions(contents))
         except KeyError:
-            result = self.operations["#"](self.make_substitutions(args))
+            result = self.operations["s"](self.make_substitutions(args))
 
         return result
 
