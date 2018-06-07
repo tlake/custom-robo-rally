@@ -20,7 +20,6 @@ class RR_Alias():
             "rb": ":red_base:",
             "ra": "is randomized",
             "ara": "are randomized",
-            "rip": ":rip:",
             "pu": "powers up",
             "pd": "powers down",
             "apu": "power up",
@@ -42,7 +41,7 @@ class RR_Alias():
         self.operations = {
             "#": self.eval_literal,
             "s": self.eval_shots,
-            "ex": self.eval_exchange,
+            "x": self.eval_exchange,
             "p": self.eval_phase,
             "0": self.eval_peaceful,
             "d": self.eval_death,
@@ -138,6 +137,8 @@ class RR_Alias():
         result = ""
         args = argstring.split()
         flag, contents = args[0], args[1:]
+        if flag[0] == "p" and flag[1:].isdigit():
+            flag, contents = flag[0], flag[1:]
         try:
             result = self.operations[flag](self.make_substitutions(contents))
         except KeyError:

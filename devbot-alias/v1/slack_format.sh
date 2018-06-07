@@ -7,7 +7,7 @@ content=$( cat rr_alias.py )
 content=$( echo "$content" | tail -n+4 )
 
 # Add Slack alias replacement to top of glob.
-content=$( echo "$content" | sed 's/class RR_Alias():/!alias replace rr !pyevalformatted class RR_Alias():/' )
+content=$( echo "$content" | sed 's/robots =/!alias replace rr !pyevalformatted robots =/' )
 
 # Convert sys.argv input to Slack alias input.
 content=$( echo "$content" | sed 's/" ".join(sys.argv\[1:\])/"""$?"""/' )

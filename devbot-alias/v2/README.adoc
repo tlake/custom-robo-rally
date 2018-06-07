@@ -1,0 +1,3 @@
+= Devbot `!rr` alias
+
+Run `slack_format.sh` to convert the contents of `rr_alias.py` into a glob that you can paste into Slack to update the alias.
