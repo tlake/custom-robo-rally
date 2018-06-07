@@ -1,0 +1,106 @@
+:toc: macro
+:toc-title:
+= Spinbot’s Inferno
+
+_or The Robots go to Hell_
+
+Justin Emerick +
+`v0.1.0`
+
+toc::[]
+
+Welcome to the City of Dis. The Robots have descended into hell where they fight for glory through evil intentions, and fall deeper and deeper into the pits of hell.
+
+== Goal
+Obtain the most victory points during the game play.
+
+== Obtaining Victory Points
+* If a robot is responsible for killing another robot: 1 victory point for the kill plus a point for each rune the robot had obtained. A bonus victory point is issued if the killing robot has 3 or more rune tokens.
+* If a robot ends a turn on a flag: 1 victory point+number of rune tokens robot currently holds.
+
+== Game play
+The robots navigate on the board. Any robot that ends a turn in the starting space is issued 2 damage tokens after phase 5 is completely finished. Each board used in the game contains two flag spawn locations. Flag 1 will immediately spawn once a robot is dies and Flag 2 will spawn once a second robot on the board dies. When a PHASE ends with two robots touching both flags, all robots in play are immediately dropped to the next level of hell incurring two points of damage. The robots on the flag pieces do not take any damage. If one or robots fall into pits as a result the new board, or dies due to the damage received, this will not trigger flags 1 or 2 to spawn for the new board in play.
+
+== Killing a robot
+For each death you are credited, you receive 1 victory point and a rune token. If you kill a robot owned by a player with 1 or more rune tokens you also receive a victory point for each rune token that robot is (was) currently holding. A player loses all their rune tokens when they die, and one option to the graveyard.
+
+== Ending a turn
+* Single Wrench (action occurs before Double Wrench or Flag robots): Heals 1 damage token and take any option card that another player holds and make it global (if 4 global options exist, discard one of the two non-circle options to the graveyard).
+* Double Wrench (action occurs before Flag) Heal 1 damage token and receive an option card from the graveyard.
+* Flag: Heal 2 damage tokens, receive an option card from the graveyard, receive a victory point and triggers an Event!
+
+== Events
+1. Sitting Duck: Triggering robot takes 2 damage and, for the next turn, cannot use owned options and cannot fire a laser. Any robot laser that hits this robot next round is magnified:
+	** first hit does X damage
+	** second hit does Y damage + X
+	** third hit does X damage + Y damage + Z damage
+	** etc.
+2. Hunting Season: Triggering robot heals 3 and, for the next turn, does normal damage for phase 1, double damage for phase 2, triple damage for phase 3, etc.
+3. Lightning Strike: Using the dice a random spot on the board is hit with lightning. Immediately kill any robot on the space, deal:  
+	** 6 damage tokens 1 space away, 
+	** 3 damage tokens 2 spaces away, 
+	** 2 damage tokens 3 space away, 
+	** 1 damage tokens 4 spaces away. 
+The spot hit becomes a pit.
+4. Malfunction: Robot on flag is scrambled for the next Turn
+5. Scramble Bomb: All robots, except the triggering robot are scrambled next Turn. All robots Fire 2 laser shots at the end of each phase.
+6. Earthquake: Roll a four sided dice to determine direction, all robots shift that directions 2 spaces and take 2 damage tokens. Robots that run into a wall or another robot take an extra damage token. Robot on flag gets credit for any kills that occur as a result.
+7. That Poor Robot: Choose a robot currently in play. That robot is powered down next turn and laser damage against the robot is doubled for the next turn.
+8. Blessed Are the Poor: The player(s) with the least options each receive one option from the Graveyard. Once this is done, the triggering robot must take one option from any player as their own and place one option from any player into the Global options.
+
+== Starting the game (Limbo)
+Each player is dealt a single card. The priority of the card will determine the order which the player places their robot in one of the 16 starting spaces. This card is also locked in the third register to begin the game. Each player begins the game with 2 options.
+
+== The Circles of Hell
+The game progresses through Hell, each Circle has a different board with a different set of 2 Global options. Once the game moves from one circle to the next, the two Circle-based global options from the previous circle are discarded to the graveyard and the two circle-based global options are immediately moved into the Global options (either from the graveyard or from a players pool of options). Once the next phase occurs the new “Special Rules” take affect. A Roborally “Turn” can start in the same Circle a maximum of 6 times.
+
+=== On the 6th Turn
+If you begin a turn that is the 6th turn for the current board the robots will fall into the next circle at the end of the turn, unless during the turn the criteria to drop into the next circle is met. After the 5th phase, before the “Ending of Turn” wrench/flag heal and options take place, the robots will fall into the next Circle, issuing 2 points of damage to each robot and removing Circle-based options/rules to the next Circle.
+
+=== Circle 2 – Lust
+
+Global Options: Tracker Beam, Scrambler
+
+Special Rules: Scrambler also deals 1 token of damage. A robot can opt to   not be scrambled by taking another token of damage. A player can only be   scrambled once per phase (ie; if two robots fire upon the same robot, that   player can opt to take 2 points for an issued scramble and another for a   normal fire).
+
+=== Circle 3 – Gluttony
+
+Global Options: Extra Memory, Flywheel
+
+Special Rules: All move 3s are move 2s.
+
+=== Circle 4 – Greed
+
+Global Options: Fire Control, Mechanical Arm
+
+Special Rules: All main laser shots do double damage unless using one of   the global options. When using Fire Control you can steal the option or add   the option to global rules. If the global rules are full, discard a rule to   the graveyard.
+
+=== Circle 5 – Wrath
+
+Global Options: Mini Howitzer, Rear Firing Laser
+
+Special Rules: Unlimited Howitzer use. During each turn, hitting a robot will add +1 to your laser’s damage power for each subsequent phase (+2 if you    double barrel option). This is reset at the begining of the next turn.
+
+=== Circle 6 – Heresy
+
+Global Options: Dual Processors, Radio Control
+
+Special Rules: If a robot is hit and radio controlled, the can take an additional   point of damage to stop the radio control and be scrambled instead – draw a   card to replace the next phase, that card is locked with the damage token   taken.
+
+=== Circle 7 – Violence
+
+Global Options: Double Barrel Laser, High Powered Laser
+
+Special Rules: Kills are worth 2 victory points and 2 runes.
+
+=== Circle 8 – Fraud
+
+Global Options: Fourth Gear, Rear Firing Laser
+
+Special Rules: Rear Firing laser deals 2 damage tokens. Fourth Gear works for all move cards (move 1 -> 2, move 2 -> 3).
+
+=== Circle 9 – Treachery
+
+Global Options: Ramming Gear, Crab Legs
+
+Special Rules: Ramming Gear does as many damage as movement (ie; moving a   robot two spaces deals 2 damage tokens). Once the robots reach Circle 9, the first robot to die spawns a flag in the middle of the board that follows the belt - The first robot to reach this flag immediately ends the game.
