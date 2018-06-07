@@ -1,0 +1,42 @@
+:toc: macro
+:toc-title:
+= Boulder McBoulderface
+
+Eric Carter +
+`v0.1.0`
+
+toc::[]
+
+== Special rules
+
+=== Boulder Movement
+This game includes a giant boulder that rotates around the edge of the map. The boulder moves between the board-action and laser steps of play. The boulder has a standard movement of one space. When the boulder reaches the edge of the board, it will continue either left or right, depending on it's current rotation (clockwise or counter-clockwise around the board). Any robot caught in the path of the boulder is crushed and killed. The boulder can be manipulated with tractor beam, pusher, or cannon. Also, robots with ramming gear can push the boulder. However the boulder cannot be pushed beyond the extents of the board.
+
+=== Spawning
+Robots can spawn from either side of the map, in an unoccupied spawn location of their choice (in order of death last round). Robots cannot fire lasers while in the safe zone. Robots cannot re-enter the safezone after leaving. Robots suffer damage equal to the number of rounds they have stayed in the safezone, at the end of a turn.
+
+=== Flag Events
+Ending a phase on the flag will trigger a flag event. A D8 will be rolled to determine which action triggers. Flags a triggered after the laser phase.
+
+1. Reverse Direction - Boulder switches direction
+2. Double Speed - Boulder moves two spaces instead of one for the remainder of turn
+3. Pause - Boulder doesn't move for the current phase
+4. Steamroll - Boulder immediately rolls to the next edge of the map, all robots in it's path are crushed.
+5. Jump sides - The boulder jumps to the other side of the map, crushing any robots in the landing zone.
+6. Shockwave - The boulder jumps and impacts the ground creating a shockwave. For the next phase, all cards are replaced with a random card.
+7. Cave-in - A stalactite falls from the ceiling, determined by a roll of 2d12. 4 damage to a robot in the impact zone, splash damage rules apply.
+8. Faulty Switch - The triggering robot takes one damage.
+
+=== End Conditions
+Play continues until one robot remains, or one month expires. Winner is the last-robot-standing, or the robot with the most lives at the end of play. Ties are broken by sudden death: all flags and wrenches are disabled, powerdown is forbidden, no respawns and the tied robots play out until one remains.
+
+=== Other Rules
+* Lives can be stolen by killing a non-zombie robot
+* Ending a turn on a wrench returns one life (to a max of 3)
+* Losing all lives turn the robot into a zombie-bot
+	** 5 cards total
+	** One hit death
+	** No lasers
+* Zombie bots can resurrect themselves if they end on a wrench
+* Zombie bots can resurrect themselves by killing a non-zombie robot
+* Zombie bots can trigger events
