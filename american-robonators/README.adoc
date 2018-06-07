@@ -1,0 +1,82 @@
+:toc: macro
+:toc-title:
+= American Robonators: Powerball
+
+_or "That one time the robots dropped their balls in pits"_
+
+Justin Emerick +
+`v0.1.0`
+
+toc::[]
+
+== Goal
+Earn the most Victory Points after 30 rounds. Robots earn 1 victory points by placing the spawned balls into the pits OR 2 victory points for killing another robot OR 3+ Victory points for pushing a robot, currently holding a spawned ball, into one of the pits. The robot with the most Victory points is declared the winner.
+
+== Game Play
+
+=== The Board
+The outer perimeter of the board is a wall, it is impossible to fall off the board from the edges. Each side of the board’s perimeter has 4 wall squares. These 16 squares, plus the 4 squares in the middle of the board, are designated ball spawning locations.
+
+=== Options
+All Options are in play. Each player can hold up to 3 options and there are always 2 community options that apply to all players.
+
+=== Phase and Turns
+Normal rules apply. Each robot sets their movement cards for each of the 5 phases. After movement belts. After belts laser fire. After the firing powerball delivery.
+
+=== Spawning a Powerball
+At the end of every phase, any player with a robot on a single or double wrench space (excluding the four flags), will roll the 20-sided dice to spawn a powerball. The wrenches are numbered (1,2,3,4), and players will roll in priority order (1-4).
+
+When a powerball is spawned it is placed in the location based on the 20 side dice. If a powerball is already spawned in that location, it is placed in the next numeric (rolling over from 20-1) open position. If there are no more green, powerball tokens, no additional powerballs will spawn.
+
+=== Picking up a powerball
+During a phase, if a Robot moves onto, or over a space with a powerball the robot may choose to pick up the ball. If the player is not present, the default action is to pickup the ball. A robot is limited to a maximum of 2 powerballs, unless options allow for additional.
+
+=== Laser Fire or Powerball?
+If a robot is not holding any powerballs, normal rules with laser fire will apply. If a robot is holding one powerball the default action is to fire main laser. However, the player can choose to throw the powerball.
+A powerball can only be thrown at a robot that is at least two spaces away from the firing robot.
+When a robot is hit by a powerball, that robot receives 2 damage AND is pushed back 2 spaces (unless a wall stops the movement). The powerball’s location on the board is on the square where the robot was hit (it’s possible that the ball will be on the same space as a robot, in which case that player has the option to pick up immediately before the next phase begins).
+
+=== Powerball Drop: Victory Point!
+In order to deliever a powerball and receive a Victory Point, the robot must be in a square next to one of the 4 pits and facing the pit. A robot can only deliver 1 powerball per phase. If a robot is holding one or more powerballs, and falls into a pit, the robot dies (and will re-spawn at the end of the phase) and receives no Victory Points for the powerballs they were holding. Each phase contains multiple steps (movement, belts, laser fire), a ball can be dropped at the end of any of these steps.
+
+=== Robot Death
+Robots can die by either falling into a pit or receiving 10 damage tokens. If a robot dies due to damage and was holding one or more powerball, these are immediately dropped. If multiple balls are dropped, the placement of each ball is shifted in the direction the robot was facing(or the opposite direction if impeded by a wall). A ball could be dropped on a space occupied by a robot. If a robot falls into a pit, or a ball's placement is on a pit space, the balls are returned to the pool of un-spawned balls.
+
+=== Causing a Death
+During a single phase, if a robot dies due to an option, movement, or fire you initiated you will receive credit for the death and receive 2 victory points. If a player is credited for pushing a robot holding one or more powerballs into a pit, that player also receives a victory point for each powerball the robot was holding.
+Example A, pushing: Robot A pushes Robot B with a higher prioirity move. Robot B's move results in a death by falling into a pit. Player A is credited with the death and receives victory points.
+Example B, pushing, no points: Robot A pushes Robot B. On a subsequent phase, Robot B ends up falling into a pit due to being pushed 1 or more phases prior. Player A does not receive credit for the death.
+Radio Control: If a robot is radio controlled, if the controlled robot falls into a pit the player who initiated the radio control is credited. If a scenario like "Example A" ocurrs as well, on any phase after Radio control was initiated, the player who pushed the robot, not the player who initiated radio control is credited for the death. If a radio controlled robot dies due to another robot's laser fire, the player who fired a laser at the robot receives credit for the death, not (necesarrily) the player with radio control.
+Scramble: If a Robot falls into a pit as the result of a scramble card, the player who scrambled receives credit for the death.
+
+=== Starting the Game
+Each player is dealt a card, from highest to lowest priority, players roll a 4 sided dice and place their robot on the corresponding flag (facing any direction). If another Robot is spawned on the same flag, they shift the robots in the direction the flag is pointing. Each robot begins the game with 1 option and two option cards at random are placed in the community option pool.
+
+=== Spawning a Robot
+In the event a robot is killed, the robot will re-spawn at the very end of the current phase, before the beginning of the next phase. If a robot dies during phase 5, the robot will re-spawn right before the End of Turn process (Wrench and Flag payouts). Robot’s re-spawn by rolling the 4-sided dice and spawn on the flag facing any direction of their choice. For the remainder of the turn, the robot is effectively powered-down. If another robot is on the flag, that robot is shifted in the direction of the flag, allowing the spawning robot to be placed on the flag. Robots spawn with no damage tokens.
+
+=== End of Turn
+* Single Wrench: Heal 1
+* Double Wrench: Heal 1 and receive Option Card
+
+==== Ending The TURN on a Flag
+* 1 Robot on Flag: treat as Double-Wrench
+* 2 Robots on Flag: heal 1, each robot (in order of flag number) may either replace a global option with any other player’s option or steal any other player’s option card (robot cannot steal from the player that is also on a flag space).
+* 3+ robots on Flag: An event occurs; the player with a robot on the lowest number flag will roll a 6-sided dice.
+
+=== Events
+* Earth Quake: Roll a 4 sided dice, robots shift two spaces that direction, any Powerballs the robot is holding are dropped and left on the space where the robot was moved from.
+* Power Heal: Robots on flag spaces heal up to 3 damage
+* Buzz Bomb: Robots on flag spaces receive a buzz bomb to be placed in any open space adjacent to their robot. This buzz bomb is dealt 5 movement cards next turn. If the bomb touches another robot it explodes. The bomb will explode directly after the powerball step of phase 5 on the next turn. Damage: 6,3,1
+* Turrets: Robots on flags fully heal. The robots on the flags are permanently stationed on the flags for the next turn. During the movement phase, robots perform a U-turn with the lowest priority. During the laser fire step Robots do 2 laser damage to any square within 4 spaces from the flag. If a robot re-spawns on the flag, the spawned robot is placed one space from the flag based on the direction of the flag arrow.
+* Meteor Shower: Each robot on a flag (in order of flag number) will roll two, 6-sided dice, twice (X, Y axis).  Where meteor lands will do: 8, 4, 2, 1 damage. If a robot on a flag dies before being able to roll, they lose the ability to roll. Robots that died will re-spawn after all meteors have landed.
+* Option Shuffle: Take 2 Options cards (in order of flag number) from the discard pile, you may keep these, trade with another player (not a player on a flag), or trade with the community options.
+* Special Options
+* Mechanical Arm: Player with Mechanical Arm allows robot to pick up a ball from an adjecent space and deposit a powerball without facing the pit. Mechanical Arm does not allow a user to be touching a flag or wrench space from an adjecent space.
+* Reverse Gear: Player with Reverse Gear can deposit a powerball either facing or facing away from a pit.
+* Extra Memory: Robot can hold an additional Powerball
+* Double Barrel: the robot either fires 1 laser and 1 powerball or can fire 2 powerballs.
+	** When 2 powerballs are fired, the targeted robot receives 4 damage and is pushed up to 4 spaces. The landing spot of one powerball is on the initial target robot space and the other powerball is placed in the next space along the path (In the event that this cannot occur, the second ball is place in the opposite square on the path).
+* Gyroscopic Stabilizer: Turns off belt (this is not a choice).
+* High Powered Laser: When throwing a powerball, it does 3 damage to a Robot and pushes up to 3 spaces.
+* Superior Archive: Option is out of the game
