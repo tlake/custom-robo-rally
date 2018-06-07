@@ -38,6 +38,8 @@ try:
     sections = line.split(", ")
     for section in sections:
         if section[0] == "#":
+            if section[1] == " ":
+                section = section[0] + section[2:]
             section = section + " "
             for i, j in robots.iteritems():
                 section = section.replace(" " + i + " ", " " + j + " ")
@@ -45,10 +47,16 @@ try:
                 section = section.replace("#" + i + ",", "#" + j + ",")
                 section = section.replace(" " + i + ",", " " + j + ",")
                 section = section.replace(" " + i + ".", " " + j + ".")
-                print(section[1:])
+            print(section[1:])
         elif section[0] == "p":
             bold = "*"
-            print("{}Phase {}:{}".format(bold, section[1], bold))
+            if int(section[1]) < 1:
+                phase = "Start of Round"
+            elif int(section[1]) > 5:
+                phase = "End of Round"
+            else:
+                phase = "Phase " + section[1]
+            print("{}{}:{}".format(bold, phase, bold))
         elif section[0] == "0":
             print(":peace_symbol:ful")
         elif section[0] == "d":
