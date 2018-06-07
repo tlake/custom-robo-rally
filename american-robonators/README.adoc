@@ -64,14 +64,15 @@ In the event a robot is killed, the robot will re-spawn at the very end of the c
 * 2 Robots on Flag: heal 1, each robot (in order of flag number) may either replace a global option with any other player’s option or steal any other player’s option card (robot cannot steal from the player that is also on a flag space).
 * 3+ robots on Flag: An event occurs; the player with a robot on the lowest number flag will roll a 6-sided dice.
 
-=== Events
-* Earth Quake: Roll a 4 sided dice, robots shift two spaces that direction, any Powerballs the robot is holding are dropped and left on the space where the robot was moved from.
-* Power Heal: Robots on flag spaces heal up to 3 damage
-* Buzz Bomb: Robots on flag spaces receive a buzz bomb to be placed in any open space adjacent to their robot. This buzz bomb is dealt 5 movement cards next turn. If the bomb touches another robot it explodes. The bomb will explode directly after the powerball step of phase 5 on the next turn. Damage: 6,3,1
-* Turrets: Robots on flags fully heal. The robots on the flags are permanently stationed on the flags for the next turn. During the movement phase, robots perform a U-turn with the lowest priority. During the laser fire step Robots do 2 laser damage to any square within 4 spaces from the flag. If a robot re-spawns on the flag, the spawned robot is placed one space from the flag based on the direction of the flag arrow.
-* Meteor Shower: Each robot on a flag (in order of flag number) will roll two, 6-sided dice, twice (X, Y axis).  Where meteor lands will do: 8, 4, 2, 1 damage. If a robot on a flag dies before being able to roll, they lose the ability to roll. Robots that died will re-spawn after all meteors have landed.
-* Option Shuffle: Take 2 Options cards (in order of flag number) from the discard pile, you may keep these, trade with another player (not a player on a flag), or trade with the community options.
-* Special Options
+=== Events (1d6)
+1. Earth Quake: Roll a 4 sided dice, robots shift two spaces that direction, any Powerballs the robot is holding are dropped and left on the space where the robot was moved from.
+2.  Power Heal: Robots on flag spaces heal up to 3 damage
+3.  Buzz Bomb: Robots on flag spaces receive a buzz bomb to be placed in any open space adjacent to their robot. This buzz bomb is dealt 5 movement cards next turn. If the bomb touches another robot it explodes. The bomb will explode directly after the powerball step of phase 5 on the next turn. Damage: 6,3,1
+4. Turrets: Robots on flags fully heal. The robots on the flags are permanently stationed on the flags for the next turn. During the movement phase, robots perform a U-turn with the lowest priority. During the laser fire step Robots do 2 laser damage to any square within 4 spaces from the flag. If a robot re-spawns on the flag, the spawned robot is placed one space from the flag based on the direction of the flag arrow.
+5. Meteor Shower: Each robot on a flag (in order of flag number) will roll two, 6-sided dice, twice (X, Y axis).  Where meteor lands will do: 8, 4, 2, 1 damage. If a robot on a flag dies before being able to roll, they lose the ability to roll. Robots that died will re-spawn after all meteors have landed.
+6. Option Shuffle: Take 2 Options cards (in order of flag number) from the discard pile, you may keep these, trade with another player (not a player on a flag), or trade with the community options.
+
+=== Special Options
 * Mechanical Arm: Player with Mechanical Arm allows robot to pick up a ball from an adjecent space and deposit a powerball without facing the pit. Mechanical Arm does not allow a user to be touching a flag or wrench space from an adjecent space.
 * Reverse Gear: Player with Reverse Gear can deposit a powerball either facing or facing away from a pit.
 * Extra Memory: Robot can hold an additional Powerball
