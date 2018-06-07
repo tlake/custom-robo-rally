@@ -1,0 +1,112 @@
+:toc: macro
+:toc-title:
+= Hack the Gibson
+
+Eric Carter +
+`v0.1.0`
+
+toc::[]
+
+== Robot Rules
+
+=== Death
+When a robot dies, they are given a death penalty icon (green token).
+This acts like a permanent unhealable damage token.
+A robot can have up to four of these tokens.
+If a robot destroys another robot, one token can be removed from the attacking robot.
+
+== Giant Robot (Gibson)
+Gibson, the giant robot, occupies a 2x2 block of the board.
+During the laser phase, Gibson also shoots.
+The left hand laser has high-power.
+The right-hand laser has double-barrel.
+Both are shot and the end of each phase.
+Gibson has 40 points of health.
+Every round Gibson's option is switched out to a random new option.
+Gibson causes 1 point of damage for every point of movement he uses to push a robot.
+If a robot is caught between Gibson and a wall, then that robot is crushed to death.
+See video for reference https://youtu.be/5ltyt5ZphAo.
+
+=== Movement
+* Gibson is not blocked by walls
+* Gibson cannot enter spawn areas
+* Gibson doesn't cross the edges of the map
+* Gibson is unaffected by pits and board lasers
+* Gibson cannot be pushed by robot movement
+* Gibson will U-Turn after the end of a movement that results in him hitting the edge of the board
+
+=== Programming/Hacking
+Gibson is given 5 cards, face down, at the start of the round.
+If a robot player has hacked a register, they have the options of replacing the card on the register with a new card from their personal hand of cards.
+If the player doesn't have enough cards then you won't be able to hack.
+
+=== Options
+* Ablative Coat -  Gibson is immune to damage
+* Abort Switch - All registers are random (no hacking)
+* Brakes - Move 1s are brakes
+* Circuit Breaker - Energy from lasers is absorbed to heal damage.
+* Conditional - If Gibson takes damage during this round, the next phases's card is replaced with a random card.
+* Crab Legs - If the second digit of the move card is even, crablegs left, otherwise crablegs right.
+* Double Barrel Laser - The high-power (left) laser is now also double barrel
+* Dual Processor - An extra 5 cards are dealt onto the 5 registers. Cards are played highest-priority first.
+* Extra Memory - Gibson gets to play an extra phase 0 using a randomly dealt card
+* Fire Control - Gibson always targets options first
+* Flywheel - All moves also include the sum of all previous moves. For example, if P1 was move 1 and P2 was move 3, then P2 would move 4.
+* Fourth Gear - All moves are +1
+* Gyroscopic Stabilizer - All board elements are disabled
+* High Power Laser - Double-barrel laser is now also high power.
+* Mechanical Arm - Any robots within one unit of Gibson are pushed away at the end of each phase.
+* Mini Howitzer - Mortar attack, roll a D6. The result of the D6 is how many spaces back behind Gibson the shell lands. The shell's blast radius is the same as Gibson's footprint. 2 damage to any robot caught in the blast.
+* Power Down Shield - Gibson doesn't move all round. Any laser that hits Gibson are reflected back to the origin.
+* Pressor Beam - Gibson repels any robot in front of him during laser fire
+* Radio Control - Gibson's lasers also radio control (yes, damage still happens)
+* Ramming Gear - If Gibson rolls over a robot, it's instant death
+* Rear Laser - Lasers come out of every side of Gibson
+* Recompile - Cards are randomly reordered before phase 1
+* Reverse Gears - All moves are done in the opposite direction. 
+* Scrambler - Scrambler bomb, all robots within 3 spaces of Gibson are randomized at the start of the round.
+* Superior Archive Copy - All damage Gibson recieves this round is restored (if Gibson doesn't die)
+* Tractor Beam - Gibson tractors any robot in front of him during laser fire
+
+== Hacking
+Hacking requires a few steps.
+
+1. When a player ends a round on a flag, they put that flag into their inventory
+2. If the robot manages to ram Gibson while holding the flag, they initiate a hack
+	** A ram is not moving adjacent, but actually driving into Gibson
+3. The player's robot token is placed on Gibson's register to indicate that the hack has happened.
+4. The flag will respawn after a succesful hack, or if the player dies.
+
+While the robot has a "hack" going on Gibson's register, he can collect the card for that register and use it as if it was in the player's own hand. A hack is cleared when all the hacking robot dies. Only one flag can be held at a time.
+
+== Board Things
+* Wrenches heal one
+* Double wrenches heal two
+* Picking up a flag gives an option
+* It is not a crime to dress up like a ghost on your own property
+
+== Start of Round
+1. Gibson recieves a new option
+
+== End of round
+1. All moves, priority order
+2. Lasers
+3. Wrenches and Flags
+
+== Winning
+
+=== Scoring
+* 1 point for damaging Gibson
+* 5 point for killing another robot.
+* 5*n points for a successful hack, where n is the number of registers owned by the hacking robot
+* 10 points for killing Gibson
+* 5 points for best hacker name
+* 5 points for play-of-the-game (decided by vote at the end of the game)
+
+=== Win Condition
+The game ends when one of these conditions is satisfied.
+* Gibson is killed (ties are broken by current score)
+* Gibson is completely hacked by one robot
+* A robot gets 10 kills
+* 4 weeks goes by
+* The universe collapses into a singularity
