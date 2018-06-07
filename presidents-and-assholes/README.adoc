@@ -1,0 +1,116 @@
+:toc: macro
+:toc-title:
+= Presidents and Assholes
+
+Justin Emerick +
+`v0.1.0`
+
+toc::[]
+
+== The Goal: 
+To be the better robot, and by “better” I mean The President.
+
+== The Game:
+The robots are all competing for political power in a game of life, and death, and taxes.
+
+* **The Constitution:**
+The game has a Constitution of (up to) 4 option cards (laws).
+These option cards are globally available.
+The game begins with _Recompile_ in the Constitution.
+* At the beginning of the game, each player is dealt a movement card.
+The card with the highest priority is the **President**, who receives the #1 flag.
+The second highest is the **Vice President**, who receives the #2 flag.
+Based on priority, the flags are issued #3, #4, and so on.
+The player with the #8 flag is the **Asshole**.
+* Players begin the game in the starting spot that corresponds to their status.
+* All players start the game with 2 option cards.
+* Every time a player causes damage to another robot, the player receives a money token.
+* If a player is responsible for killing another robot, they receive 3 money tokens.
+If a player kills the **Vice President** or the **Asshole**, 4 money tokens.
+The **President**, 5 money tokens.
+
+=== Obtaining Points
+The player who is the **President** can obtain Victory Points while “governing” – this means they are not powered down and end the phase inside the “governing zone” – a space that is on or inside the Double Belt.
+Every phase you spend as a “governing” **President** is worth 1 Victory Point.
+
+If the **President** is powered down or outside the governing zone, the **Vice President** receives 1 Victory Point for each phase (only if they meet the same “governing” criteria). 
+
+If neither the **President** and the **Vice President** do not meet the “governing” criteria, all other players except the **Asshole** receive 1 Victory Point.
+The player with the most points wins the game.
+In the event of a tie, the player with the most points and most money wins, obviously.
+
+=== Before Each Turn
+* The **President**, at random, can take two of the **Asshole**'s cards and decide to exchange them with two of the **President**'s own. 
+	** This must be done immediately after the cards have been dealt.
+	If the **President** is not present and the **Asshole** has already placed their turn, the **President** can only select, at random, two of any remaining cards.
+
+=== Game play
+* Before each turn, option cards can be bought for 3 pieces of money or sold back to the bank for 2 pieces of money.
+	** The **President** and **Vice President** cannot buy or sell.
+* Victory Points are given after the firing phase.
+* All non-presidential players do double damage to the **President** and **Vice President**.
+* For each damage token your robot is responsible for giving, you receive that amount immediately in money tokens.
+* If a robot dies, that player loses all their money back to the bank.
+* If the **President** dies, the **Vice President** immediately becomes the **President**.
+#3 does not immediately move into the **Vice President** role - it is vacant for the rest of the turn.
+* Players remain in the same flag status through the entire turn - only when the turn is complete do players shuffle into new flag status, with the exception of the **Vice President** to **President**.
+
+=== End of Turn
+In this order:
+
+* **Taxes for the Asshole**.
+The player that is the **Asshole** pays one money token to then bank.
+If the spot is vacant, no tax is paid.
+* **Payouts and Wrench Bonuses.**
+Any player that was not powered down and who is on a wrench or flag receives 3 money tokens.
+All flags and wrenches are treated as double wrenches which heal and give an option card as usual (regardless of powered-down status).
+* **Shuffle Status.**
+The current **President** and **Vice President** remain #1 and #2 (unless there is no **Vice President** due to death).
+Other players move into new status roles for the next turn based on how much money they have.
+In event of a tie, the current status is the tiebreaker.
+* **President Enacts Laws.**
+Choose **one** of the following:
+	1. _Create a New Law._
+	The President can take an option from any player’s pile and move it to the **Constitution**.
+	Now all players can have this option.
+	2. _Revoke a Law._
+	Remove one of the laws from the **Constitution**.
+	“Recompile” cannot be revoked.
+If the **President** is not physically present, no Law is revoked/enacted.
+* **The Dead Return to Life.**
+Robots that died during the turn are placed back on the board starting at status #8.
+Robots come back on the start spot of their status.
+	** Example: 3 robots die in one turn. The first to die would respawn at status #6, the second to die at #7, and the last to die would respawn at #8 and become the newest **Asshole**.
+
+==== Flag Events
+If someone ends a turn on the flag, an event is triggered.
+This occurs after all other end-of-turn steps.
+Roll an 8-sided die:
+
+|===
+| 1 | Win the Lottery! – Get 10 pieces of money and 5 Victory Points.
+| 2 | Pay Taxes – All players pay money to the bank as follows: the **President** and the **Vice President** pay 1 money token; #3 and #4 pay 3 money tokens; #5, #6, and #7 pay 4 money tokens; the **Asshole** pays 5 money tokens.
+| 3 | A Vote! – Among all non-governing players, the players shuffle into status based on total money.
+The players with the most and second-most money become the **President** and **Vice President**, respectively.
+Use current Status as a tiebreaker.
+The acting **President** and **Vice President** immediately lose half their money to the bank, rounding down.
+The **Vice President** is moved to status #7, and the **President** becomes the new **Asshole**.
+The rest of the players shuffle up into their new statuses.
+| 4. | Power to the People! – All players except the **President** and **Vice President** heal up to 4 damage tokens.
+| 5. | Assassination! –  The **President** immediately dies.
+The **Vice President** is now the new **President** and everyone moves up one place in flag status (#3 becomes the new **Vice President**).
+The previous **President** becomes #8, the **Asshole**, and loses all money to the bank.
+| 6. | Great Depression – Everyone except the **President** and the **Vice President** immediately lose half their money to the bank, rounding down.
+| 7. | Government Shut Down – The **President** and the **Vice President** are powered-down next turn.
+| 8. | Political Chaos – The **President** and **Vice President** are _Scrambled_ next turn.
+|===
+
+After the flag event and before the next turn, roll two 6-sided dice, twice.
+The first roll is the X-coordinate and the second roll is the Y-coordinate for replacing the flag for the next turn.
+The flag will move on belts.
+If a player does not end a turn on the flag, it remains in the same location for the next turn.
+
+==== Other Rules:
+* Option cards don’t stay discarded. Every time an option card leaves play, they go to a temporary discard pile.
+The discard pile is reshuffled with available option cards before the beginning of every turn.
+
