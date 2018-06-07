@@ -1,0 +1,172 @@
+:toc: macro
+:toc-title:
+= Tower Defense??
+
+Eric Holton +
+`v0.1.0`
+
+toc::[]
+
+== Victory
+Winner is the robot with the most XP after the sixth flag is touched or 20 turns.
+
+== Rules
+Normal Robo Rally rules except as noted here.
+
+=== Earning Experience
+|===
+| Killing another robot | 10
+| Killing a tower | 5
+| Touching a flag | 3
+| Killing a drone | 5
+|===
+
+=== Robot Levels
+As a robot earns XP, they will level up.
+All robots start at level zero.
+Each level has special abilities.
+
+
+[options="header"]
+|===
+| Level | XP Needed | Abilities
+| 1 | 5 | 2 points of damage if target is in a range of 1
+| 2 | 15 | 2 points of damage if target is in a range of 2
+| 3 | 45 | 2 points of damage if target is in a range of 3, can do indirect fire, range 5
+| 4 | 85 | 2 points of damage if target is in a range of 4, can do indirect fire, range 5, plus 5% to targeting, can target drones from ground level.
+| 5 | 135 | 2 points of damage if target is in a range of 5, can do indirect fire, range 5, plus 10% to targeting, can target drones from ground level.
+|===
+
+=== Robot Death
+When a robot dies on the board, they will leave behind debris (marked by a damage token).
+If another robot runs over the debris, the token is removed and that robot heals one.
+
+=== Ramps and Levels
+
+==== Ramps
+It takes forward 2 movement points to go up a ramp; this can be can be done with a Move 2+ (or a Backup 2+), or take two phases in the same turn with Move 1's (or Backup 1's).
+
+==== Falling from upper level
+Robot takes 2 points of damage.
+If a robot lands on another robot they each take 1 point of damage instead, and the falling robot is moved one random square from where they fell on the ground level.
+
+==== Levels
+Laser fire can only hit on the same height, unless rules state otherwise. 
+
+
+=== Towers
+Towers choose their targets by the active robot (must have moved in that phase; a robot which is powered-down or is using _Brakes_ is not considered moving) that is closest to them first.
+In case of a tie they target the active robot closest to flag 6.
+
+The number of pips on the die is the number of hit points for that tower.
+
+==== Laser Towers
+Marked by six side die.
+Follow normal laser rules.
+
+==== Howitzer Towers
+Marked by non-six sided die.
+
+Indirect Fire, Range 8, Damage 2, Splash.
+Shooting up a level: -1 Range.
+Shooting down a level: +1 Range.
+Use the <<Accuracy Table>> for where the shell lands.
+Splash damage does not hurt firing tower (they are prepared for it).
+
+=== Drones
+Marked by life token.
+Drones move each phase with a movement of 2 after all robots have moved for the phase.
+Drones choose their targets by the active robot (must have moved in that phase; a robot which is powered-down or is using _Brakes_ is not considered moving) that is closest to them first.
+In case of a tie they target the active robot closes to flag 6.
+If a drone “lands” on an active robot, it does 4 points of damage with splash damage.
+
+=== Accuracy Table
+
+[options="header"]
+|===
+| Percentage | Targeting
+| 01-15 | Off by 3 square
+| 16-25 | Off by 2 square
+| 26-65 | Off by 1 square
+| 66-100 | On Target
+|===
+
+=== Events
+
+==== Tower Events
+A tower event will happen on any turn that a robot dies.
+If an event causes a robot to die, the next turn will also have a tower event.
+
+[options="header"]
+|===
+| Roll (3d6) | Tower Event
+| 3 | Loss of control – drones do not move next turn, towers do not fire.
+| 4 | Loss of control – all drones fall, causing normal damage.
+| 5 | Loss of control – a random drone falls, causing normal damage.
+| 6 | Glitch – all towers lose one hit point unless this would kill the tower.
+| 7 | Glitch – a random tower loses one hit point unless this would kill the tower.
+| 8 | Movement – a random drone moves 2 spaces with normal targeting.
+| 9-10 | Launch a new drone (4 max).
+| 11 | Repair – a random laser tower is repaired.
+| 12 | Repair – a random howitzer tower is repaired.
+| 13 | Repair – a random damaged laser tower is repaired.
+| 14 | Repair – a random damaged howitzer tower is repaired.
+| 15 | Launch a new drone (no max).
+| 16 | Scramble Bomb – Splash of 4 squares Random powered up robot is targeted.
+Any robot hit gets 5 random cards next turn.
+Locked registers are replaced and then the new card becomes the locked register.
+Use the <<Accuracy Table>> for targeting.
+| 17 | Drone Swarm – 4 drones are launched (no max).
+| 18 | Missile Strike – Random powered up robot is targeted. Damage is 6 with splash. Use accuracy table for targeting.
+|===
+
+==== Robot Events
+If a robot ends a turn on a flag, kills a tower, or ends on a double repair site, a robot event is triggered.
+
+[options="header"]
+|===
+| Roll (3d6) | Robot Event
+| 3 | Loss of control – all powered up robots are scrambled next turn
+| 4 | Loss of control – a random powered up robots are scrambled next turn
+| 5 | Earthquake – all robots move 2 spaces in a random direction (drones and towers are not effected)
+| 6 | Earthquake – all robots move 1 spaces in a random direction (drones and towers are not effected)
+| 7 | Glitch - a random robot gets a random register locked (if they roll a 6 on a 1d6, then no register is locked.
+| 8 | Glitch – a random robot takes one point of damage.
+| 9-10 | Repair - Random robot is healed by 2
+| 11 | Repair – Random damaged robot is healed by 2
+| 12 | Repair – Random robot is fully healed
+| 13 | Repair – Random damaged robot is fully healed
+| 14 | Repair – All robots are healed by 2
+| 15 | Repair – All robots are fully healed
+| 16 | Takeover control – a random drones falls, causing no damage
+| 17 | Takeover control – all drones fall, causing no damage
+| 18 | Missile Strike – Random tower is targeted. Damage is 6 with splash. Use accuracy table for targeting.
+|===
+
+=== Card Changes
+
+==== Mini Howitzer 
+* Indirect Fire
+* Range 8
+* Damage 2
+* Splash
+* Shooting up a level: -1 Range.
+* Shooting down a level: +1 Range.
+* Splash damage does not hurt firing tower (they are prepared for it).
+* Use <<Accuracy Table>> to determine where shell lands.
+
+==== High-Power Laser
+* Damage of 2 to towers
+
+==== Double-Barreled Laser
+* Can hit drones
+
+
+==== Ramming Gear
+* Damage of 2 to towers
+
+==== Pressor Beam
+* Moves Drones 5 spaces
+
+
+
