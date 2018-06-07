@@ -1,0 +1,172 @@
+:toc: macro
+:toc-title:
+= Robo Dodgeball
+
+Jonathan Stallings +
+`v0.1.0`
+
+toc::[]
+
+Robots dodge, duck, dip, dive, and dodge as they try to pummel their opponents into submission in this team-based RoboRally variant. In this version, eliminated robots get back into action quickly as their team vies for points.
+
+== Winning Criteria
+The team with the most points after 20 turns is the victor.
+
+== Board Layout
+Each team’s playable area is described by its backline, the sidelines, and the centerline.
+Players who move outside of these boundaries during game play are out of bounds.
+Unless otherwise specified, board hazards within the playable area are initially disabled.
+
+== General Rules
+Robots do not fire lasers or accrue damage. Instead, robots eliminate the opposing team by throwing balls at opponents.
+Live balls can target any robot. Dead balls may only be passed to teammates. Lost balls are out of play.
+To become a live ball, a robot in possession of a ball must activate it by touching their team’s backline.
+The normal ball limit is four.
+If a ball is lost and the number of live balls is less than the ball limit, a new live ball is immediately spawned on a random space against the closest backline to where the ball was lost.
+A robot that is hit, out of bounds, or throws a ball caught by an opponent is called out.
+Falling in a pit also results in being out.
+A robot called out is removed from play, and placed outside the sidelines as close as possible to the centerline.
+Each time a robot is called out, its opponent receives 1 point.
+If an entire team is eliminated in a single turn, their opponents receive 10 bonus points. All balls are lost, and the next turn begins as a new opening rush.
+Robots may have only one option at a time.
+
+== Setup
+Create two teams of four robots each.
+Place robots along their team’s backline to prepare for the Opening Rush first turn.
+Game begins with four balls placed adjacent to the centerline in groups of two. Each group of two is placed at opposite ends of the centerline.
+
+=== Opening Rush
+The first turn follows the standard turn rules shown in the next section except:
+Robots can only initially retrieve the balls to their right (viewed from their backline).
+Robots may cross the centerline.
+Balls are initially dead balls. 
+Belts within the court disabled during this turn. Boundary belts function normally.
+
+== How to Play
+Do the following in order each turn:
+Deal the Program cards (As standard RoboRally)
+Program robot registers (As standard RoboRally)
+Complete each register in order 
+Cleanup
+
+=== Complete Registers
+Reveal Program Cards (As standard RoboRally)
+Robot Initiative Order
+Board Elements Move (As standard RoboRally)
+
+==== Robot Initiative Order
+Dodgeball is a fast-paced game of action and reaction. Both movement and actions are resolved in initiative order; that is, according to the priority level of the program cards. After a robot moves, it immediately completes an action (if able) before play proceeds to the next robot in initiative order.
+
+==== Movement
+Unless otherwise noted, each robot moves on its priority according to standard RoboRally rules. 
+Moving over an item causes the robot to immediately take possession of it (if able).
+
+==== Action
+A robot’s action in each register is determined by its movement card and whether it is in possession of a ball. Certain options may enable other actions.
+
+Movement Card
+Ball
+No Ball
+Move 1, 2, or 3
+Throw
+Dodge
+Backup
+Block
+Catch
+Rotate left, right
+Hook Shot
+Dodge
+U-Turn
+Power Shot
+Taunt
+
+===== Throw
+
+====== Determining to throw
+Unless taking the block action, a robot holding a ball will always throw at the closest target if it can.
+Dead balls can only be used to target teammates.
+A teammate whose back is to thrower or is already carrying an item is not a valid target.
+Without a valid target, a robot holding a ball defaults to a dodge action.
+
+====== Resolving a throw
+If the target is a teammate:
+The target teammate receives possession of the passed ball.
+If the target is an opponent:
+And its back is to the thrower, the target is hit.
+Who took the dodge action with a higher priority, the throw is missed.
+Who took the block action, the throw is blocked.
+Who took the catch action, the throw is caught.
+Unless otherwise noted, any other case results in a hit.
+
+===== Hook Shot
+Cannot be caught by an opponent. Attempts to do so result in a hit.
+Otherwise, follows the rules of a standard throw.
+
+===== Power Shot
+Cannot be defended against (dodged, blocked, or caught) by an opponent. Attempts to do so result in a hit.
+Otherwise, follows the rules of a standard throw.
+
+===== Dodge
+Robot attempts to react more quickly than opponents and avoid throws it can see. A successful dodge results in a miss. A missed throw will continue in its initial direction to the next target, if any. If no valid targets, it becomes a lost ball when it reaches a boundary or obstacle.
+
+===== Block
+Robot forgoes a chance to throw and attempts to block incoming throws with its own ball. A successful block results in the thrown ball becoming a lost ball.
+
+===== Catch
+Robot takes a defensive posture to catch incoming throws. A successful catch of an opponent’s ball results in the thrower becoming out, and the catcher receiving a bonus point. The caught ball is still a live ball.
+
+===== Taunt
+Robot attempts to distract and disrupt opponent. Follow rules for targeting as if robot were a thrower. If the closest target is an opponent, that opponent is humiliated and any balls it holds are dropped. 
+
+=== Cleanup
+Current events and associated effects end.
+Any robot ending a turn on a wrench may receive an option, if available. If the robot already has an option, it must discard its current option to receive the new option.
+Discarded options are shuffled into deck.
+Any robot (even if out) ending a turn adjacent to an event flag triggers an event. Roll a D10 on the events table. Only one event can be triggered per turn.
+Robots who are out return to play, spawning as described in opening rush.
+
+== Events
+Oil Slick -- The perimeter of the court (one space inside boundary) is covered in oil next turn! All robots will continue one further space in any direction they move on the oil.
+Reversal of Fortune -- Robots on currently winning team lose all options. Robots on currently losing team gain one option each (order determined by team). If a tie, all options are lost.
+Multi-ball -- All current balls in play are lost. Then, all robots start next turn holding a live ball, and the ball limit is 8 for that turn.
+Start it up -- Belts and spinners are active next turn. Roll a D6:
+5 or less: Belts and spinners function normally.
+6: Belts and spinners function in reverse.
+Dangerous ground -- Pits are open next turn.
+Butterfingers -- All held balls are dropped.
+Team Huddle -- Players on the currently losing team may exchange a single program card with each teammate prior to revealing program cards next turn.
+If you can dodge a wrench -- A barrage of wrenches assaults the court. Each player rolls a D6. 
+5 or less: Ouch! Player’s robot has its first register scrambled next turn with the random card immediately placed face up.
+6: You can dodge a ball! Player’s robot will auto-dodge all throws (including power shots!) from an opponent next turn.
+Turn a blind eye -- Enforcement of out of bounds is suspended for the next turn.
+Boomerang shot -- For the next turn, thrown balls resulting in a hit are not lost; they are instead returned to the thrower as a live ball.
+
+== Glossary
+Backline -- the line on a team’s side of the court furthest away from the opponent’s side.
+Blocked -- a thrown ball blocked by an opponent; ball becomes a lost ball.
+Caught -- a thrown ball caught by an opponent; thrower is out.
+Dead ball -- a ball that is deactivated. May be picked up, but cannot be used until activated.
+Dropped -- any item dropped becomes lost and removed from play.
+Hit -- a robot struck by an opponent’s throw becomes out and ball becomes lost ball.
+In -- being eligible to participate in the game on the court.
+Item -- something that a robot may pick up, such as a live ball, or dead ball.
+Live ball -- a ball that has been activated. May be used to throw or block.
+Lost ball -- a ball that has been recycled by the arena. It is out of play.
+Opening rush -- the first turn of play in a new game.
+Out -- out of play. Must move robot outside team’s sideline.
+Out of bounds -- being outside of the boundaries describing the playing area of one’s team.
+Pass -- a throw which targets a teammate.
+Thrower -- a robot that takes the throw action.
+Target -- any robot in a direct path extending from the front of a thrower after the thrower’s movement is completed.
+
+== Option List
+Only the following options are included with this game:
+Crab legs
+Reverse gear
+* Brakes (enables a catch/block)
+Mechanical arm
+Fourth gear
+* Dual processor (Moves on priority order of rotate; considered hook shot or power shot)
+Extra memory
+Flywheel
+Conditional programming
