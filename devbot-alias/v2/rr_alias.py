@@ -81,8 +81,15 @@ class RR_Alias():
 
     def eval_phase(self, contents):
         bold = "*"
-        result = "{b}Phase {}:{b}".format(
-            contents[0],
+        if int(contents[0]) < 1:
+            which_phase = "Start of Round"
+        elif int(contents[0]) > 5:
+            which_phase = "End of Round"
+        else:
+            which_phase = "Phase " + contents[0]
+
+        result = "{b}{}:{b}".format(
+            which_phase,
             b=bold,
         )
 
