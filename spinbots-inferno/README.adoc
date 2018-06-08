@@ -48,16 +48,24 @@ The spot hit becomes a pit.
 7. That Poor Robot: Choose a robot currently in play. That robot is powered down next turn and laser damage against the robot is doubled for the next turn.
 8. Blessed Are the Poor: The player(s) with the least options each receive one option from the Graveyard. Once this is done, the triggering robot must take one option from any player as their own and place one option from any player into the Global options.
 
-== Starting the game (Limbo)
-Each player is dealt a single card. The priority of the card will determine the order which the player places their robot in one of the 16 starting spaces. This card is also locked in the third register to begin the game. Each player begins the game with 2 options.
-
 == The Circles of Hell
 The game progresses through Hell, each Circle has a different board with a different set of 2 Global options. Once the game moves from one circle to the next, the two Circle-based global options from the previous circle are discarded to the graveyard and the two circle-based global options are immediately moved into the Global options (either from the graveyard or from a players pool of options). Once the next phase occurs the new “Special Rules” take affect. A Roborally “Turn” can start in the same Circle a maximum of 6 times.
 
 === On the 6th Turn
 If you begin a turn that is the 6th turn for the current board the robots will fall into the next circle at the end of the turn, unless during the turn the criteria to drop into the next circle is met. After the 5th phase, before the “Ending of Turn” wrench/flag heal and options take place, the robots will fall into the next Circle, issuing 2 points of damage to each robot and removing Circle-based options/rules to the next Circle.
 
+== Starting the game (Limbo)
+Each player is dealt a single card. The priority of the card will determine the order which the player places their robot in one of the 16 starting spaces. This card is also locked in the third register to begin the game. Each player begins the game with 2 options.
+
+Deal remaining cards and proceed with the game as usual, starting in Circle 2.
+
 === Circle 2 – Lust
+
+Board: Chess
+
+Spawning Boards: Along the two edges of the board which the yellow conveyor belts point toward.
+
+Flags: One on each of the two hammer-and-wrench squares in the center.
 
 Global Options: Tracker Beam, Scrambler
 
@@ -65,11 +73,23 @@ Special Rules: Scrambler also deals 1 token of damage. A robot can opt to   not 
 
 === Circle 3 – Gluttony
 
+Board: Exchange
+
+Spawning Boards: One along the edge of the board which touches five yellow conveyor belt squares, and the other on the other side of the board.
+
+Flags: One on the hammer-and-wrench square near the center, and a second to mirror it three squares diagonally across the center of the board.
+
 Global Options: Extra Memory, Flywheel
 
 Special Rules: All move 3s are move 2s.
 
 === Circle 4 – Greed
+
+Board: Cross
+
+Spawning Boards: Along the two edges of the board which are parallel to the double board laser.
+
+Flags: One on each of the two hammer-and-wrench squares near pits.
 
 Global Options: Fire Control, Mechanical Arm
 
@@ -77,11 +97,23 @@ Special Rules: All main laser shots do double damage unless using one of   the g
 
 === Circle 5 – Wrath
 
+Board: Spin Zone
+
+Spawning Boards: Along the two edges of the board which are parallel to the two longer board lasers.
+
+Flags: On two of the four central squares, diagonal from each other, aligned upon an imaginary straight line between the two single-wrench squares.
+
 Global Options: Mini Howitzer, Rear Firing Laser
 
-Special Rules: Unlimited Howitzer use. During each turn, hitting a robot will add +1 to your laser’s damage power for each subsequent phase (+2 if you    double barrel option). This is reset at the begining of the next turn.
+Special Rules: Unlimited Howitzer use. "Wrath Damage" - _Keep track of a Wrath counter (it starts at zero) for each robot. Whenever a robot deals damage with laser fire, that robot deals laser damage as normal, then also inflicts an amount of damage equal to their Wrath counter. At the end of every phase (except phase 5) in which a robot causes damage to one or more robots via laser fire, that robot adds 1 to its Wrath counter. At the end of phase 5, reset all Wrath counters to zero._
 
 === Circle 6 – Heresy
+
+Board: Chop Shop
+
+Spawning Boards: Along the two edges of the board which are parallel to the double and triple board lasers.
+
+Flags: One on the hammer-and-wrench square in the middle of the board, and a second on the hammer-and-wrench square which is directly adjacent to a pit.
 
 Global Options: Dual Processors, Radio Control
 
@@ -89,11 +121,23 @@ Special Rules: If a robot is hit and radio controlled, the can take an additiona
 
 === Circle 7 – Violence
 
+Board: Vault
+
+Spawning Boards: ALong the two edges of the board which are parallel to four out of five of the board lasers.
+
+Flags: On two of the four central hammer-and-wrench squares, diagonal from each other, aligned **NOT** on an imaginary straight line between the two single-wrench squares in the corners of the board.
+
 Global Options: Double Barrel Laser, High Powered Laser
 
 Special Rules: Kills are worth 2 victory points and 2 runes.
 
 === Circle 8 – Fraud
+
+Board: Island
+
+Spawning Boards: Along the two edges of the board which are parallel to the two conveyor belts in the center.
+
+Flags: One placed on the only empty square which is one conveyor-belt-square away from the hammer-and-wrench square in the center, and a second placed such that a diagonal line can be drawn across a pit square, a green clockwise spinner, a red counter-clockwise spinner, and this flag.
 
 Global Options: Fourth Gear, Rear Firing Laser
 
@@ -101,6 +145,12 @@ Special Rules: Rear Firing laser deals 2 damage tokens. Fourth Gear works for al
 
 === Circle 9 – Treachery
 
+Board: Maelstrom
+
+Spawning Boards: Along the two edges of the board without any hammer-and-wrench squares.
+
+Flags: See the Special Rules below.
+
 Global Options: Ramming Gear, Crab Legs
 
-Special Rules: Ramming Gear does as many damage as movement (ie; moving a   robot two spaces deals 2 damage tokens). Once the robots reach Circle 9, the first robot to die spawns a flag in the middle of the board that follows the belt - The first robot to reach this flag immediately ends the game.
+Special Rules: Ramming Gear does as many damage as movement (ie; moving a robot two spaces deals 2 damage tokens). Once the robots reach Circle 9, the first robot to die spawns a flag in the middle of the board that follows the belt - The first robot to reach this flag immediately ends the game.
